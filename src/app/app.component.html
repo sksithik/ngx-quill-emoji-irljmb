@@ -1,0 +1,18 @@
+<quill-editor [(ngModel)]="htmlText"
+  placeholder="Enter Text"
+  [modules]="quillConfig"
+  (onSelectionChanged)="onSelectionChanged($event)"
+  (onContentChanged)="onContentChanged($event)"></quill-editor>
+
+<div class="toolbar">
+  <button class="ql-bold">Bold</button>
+  <button class="ql-link">Link</button>
+  <button class="ql-emoji"></button>
+  <button (click)="hello()">Hello</button>
+</div>
+  
+
+
+  <div>
+    <pre>{{htmlText}}</pre>
+  </div>
